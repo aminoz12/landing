@@ -64,3 +64,40 @@ Fonts used:
 
 You can customize colors and fonts in `tailwind.config.js`.
 
+## Deployment on Netlify
+
+This project is configured for easy deployment on Netlify.
+
+### Automatic Deployment (Recommended)
+
+1. Push your code to GitHub (already done)
+2. Go to [Netlify](https://www.netlify.com/) and sign in
+3. Click "Add new site" → "Import an existing project"
+4. Connect your GitHub account and select the `aminoz12/landing` repository
+5. Netlify will automatically detect Next.js and use the settings from `netlify.toml`
+6. Click "Deploy site"
+
+The build settings are pre-configured:
+- **Build command**: `npm run build`
+- **Publish directory**: `.next`
+- **Node version**: 18
+
+### Manual Deployment
+
+If you prefer to deploy manually using Netlify CLI:
+
+```bash
+npm install -g netlify-cli
+netlify deploy --build
+netlify deploy --prod
+```
+
+### Environment Variables
+
+If you need to set environment variables:
+1. Go to your Netlify site dashboard
+2. Navigate to **Site settings** → **Environment variables**
+3. Add any required variables
+
+The site will be automatically deployed on every push to the main branch.
+
